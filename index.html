@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Web</title>
+</head>
+
+<body>
+    <h1>Calculadora WEB</h1>
+    <form onsubmit="calculadoraweb">
+        Primeiro Número<br>
+        <input id="n1" type="number"/><br><br>
+        Segundo Número<br>
+        <input id="n2" type="number" name="n2"><br><br>
+        <button onclick="somar()">Somar</button>
+        <button onclick="subtrair()">Substrair</button>
+        <button onclick="Dividir()">Dividir</button>
+        <button onclick="Multiplicar()">Multiplicar</button>
+        <br><br>
+        O Resultado é: <span></span>
+        <script>
+            var n1 = document.querySelector('#n1') /* Criando variável e buscando o n1 do HTML*/
+            var n2 = document.querySelector('#n2')
+            var resultado = document.querySelector('span')
+    
+            /*Criando função*/
+            function somar() {  /*converteu para números inteiros(função somar)*/
+                resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+            }
+    
+            function subtrair() {  /*converteu para números inteiros(função subtrair)*/
+                resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+            }
+    
+            function Dividir() {  /*converteu para números inteiros(função Dividir)*/
+                resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+            }
+    
+            function Multiplicar() {  /*converteu para números inteiros(função Multiplicar)*/
+                resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+            }
+        </script>
+</body>
+</html>
